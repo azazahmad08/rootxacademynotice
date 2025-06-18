@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICT Bangla - Rootx Academy | Notice Board</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fade in */
+    .fade-in {
+      animation: fadeIn 1.2s ease-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Wavy background animation */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1), transparent 40%),
+                  radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1), transparent 40%),
+                  linear-gradient(135deg, #c3e0f8, #f3d1f4);
+      background-size: cover;
+      animation: floatBg 20s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes floatBg {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-20px) scale(1.02);
+      }
+    }
+
+    /* Animated title text */
+    .text-animate {
+      background: linear-gradient(90deg, #4f46e5, #ec4899, #0ea5e9);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientFlow 6s ease infinite;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center p-6">
+
+  <!-- Animated Header -->
+  <header class="mb-8 text-center fade-in">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-animate drop-shadow-md">📢 Notice Board</h1>
+    <p class="text-gray-600 mt-2 font-medium">ICT Bangla – Rootx Academy</p>
+  </header>
+
+  <!-- Notice Card -->
+  <div class="bg-white shadow-2xl rounded-2xl p-6 max-w-xl w-full fade-in">
+    <!-- Profile Header -->
+    <div class="flex items-center space-x-4">
+      <img src="rootxacademy.png" alt="Rootx Academy" class="w-16 h-16 rounded-full border-2 border-blue-500 shadow-lg" />
+      <div>
+        <h2 class="text-xl font-bold text-indigo-700">ICT Bangla - Rootx Academy</h2>
+        <p class="text-sm text-gray-500">📌 Official Update</p>
+      </div>
+    </div>
+
+    <!-- Message Body -->
+    <div class="mt-5 text-gray-700 space-y-3">
+      <p>🎁 আজ আমরা তোমাদের জন্য <span class="font-semibold text-indigo-600">Chapter 6 এর গুরুত্বপূর্ণ শীট</span> শেয়ার করেছি ✅</p>
+      <p>👉 শীটে রয়েছে সহজ ভাষায় ব্যাখ্যা, গুরুত্বপূর্ণ প্রশ্ন, এবং বোর্ড ভিত্তিক সাজেশন।</p>
+      <p>🧑‍🏫 <span class="text-blue-600 font-semibold">শীঘ্রই আমাদের Online Class শুরু হতে যাচ্ছে!</span></p>
+      <p>📅 সময়সূচি ও Zoom লিংক খুব শীঘ্রই জানিয়ে দেওয়া হবে ইনশাআল্লাহ।</p>
+      <p class="text-pink-600 font-medium">📥 নিচের বাটনে ক্লিক করে শীটটি ডাউনলোড করে নাও:</p>
+    </div>
+
+    <!-- Download Button -->
+    <div class="mt-6 text-center">
+      <a href="RXA_CHAP6_NOTE.pdf" download
+         class="inline-block px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transform transition-all duration-300 ease-in-out">
+        📄 RXA_CHAP6_NOTE.pdf ডাউনলোড করুন
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-10 text-center text-gray-700 text-sm space-y-2">
+    <p>🚀 <strong>Learn | Practice | Succeed</strong></p>
+    <p>
+      Developed by 
+      <a href="https://rootxsoftwares.netlify.app" target="_blank" class="text-blue-600 font-medium hover:underline">
+        Rootx Softwares LTD
+      </a>
+    </p>
+    <div class="flex justify-center space-x-4 text-blue-500">
+      <a href="https://rootxsoftware.netlify.app" target="_blank" class="hover:text-blue-700">📘 Facebook Page</a>
+      <a href="https://www.facebook.com/groups/ictbanglarootxacademy" target="_blank" class="hover:text-blue-700">👥 Facebook Group</a>
+      <a href="https://youtube.com/@rootxacademy" target="_blank" class="hover:text-red-500">▶️ YouTube Channel</a>
+    </div>
+    <p class="text-gray-400">© 2025 Rootx Academy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
